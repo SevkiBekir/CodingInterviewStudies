@@ -8,10 +8,6 @@ def compressString(text):
 
     countedText = ""
     for char in text:
-        # # check last character
-        # if charIndex == textLength - 1:
-        #     continue
-
 
         if countedText == "" or char in countedText:
             # added the char
