@@ -3,6 +3,7 @@ from Chapter2.Node import Node
 class LinkedList:
     def __init__(self):
         self.head = None
+        self.size = 0
 
     def printList(self):
         printingNode = self.head
@@ -15,7 +16,8 @@ class LinkedList:
         newNode = Node(newData)
 
         if self.head is None:
-            self.head.next = newNode
+            self.head = newNode
+            self.size +=1
             return
 
         lastNode = self.head
@@ -24,12 +26,14 @@ class LinkedList:
             lastNode = lastNode.next
 
         lastNode.next = newNode
+        self.size += 1
 
     def insertHead(self,newData):
         newNode = Node(newData)
 
         if self.head is None:
             self.head = newNode
+            self.size +=1
             return
 
         newNode.next = self.head
@@ -44,6 +48,7 @@ class LinkedList:
         nextNode = afterNode.next
         afterNode.next = newNode
         newNode.next = nextNode
+        self.size += 1
 
     def removeNode(self,removingData):
 
@@ -54,6 +59,7 @@ class LinkedList:
             if removingNode.data == removingData:
                 self.head = removingNode.next
                 removingNode = None
+                self.size -= 1
                 return
 
             previousNode = self.head
@@ -65,4 +71,5 @@ class LinkedList:
 
                 previousNode = removingNode
                 removingNode = removingNode.next
+                self.size -= 1
 
