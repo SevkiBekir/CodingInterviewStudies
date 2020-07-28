@@ -6,6 +6,7 @@ class LinkedList:
         self.size = 0
 
     def printList(self):
+        print("Printing List")
         printingNode = self.head
 
         while printingNode is not None:
