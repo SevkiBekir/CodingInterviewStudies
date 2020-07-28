@@ -1,5 +1,5 @@
-from Chapter2.Node import Node
 from Chapter2.LinkedList import LinkedList
+
 
 def convertLinkedListToHashTable(linkedList):
     hashTable = {}
