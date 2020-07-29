@@ -13,7 +13,7 @@ def convertToInteger(linkedList):
         step *=10
         node = node.next
 
-    return sum
+    return int(sum)
 
 def convertToLinkedList(number):
     linkedList = LinkedList()
