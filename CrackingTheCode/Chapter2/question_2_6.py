@@ -1,4 +1,4 @@
-from Chapter2.LinkedList import LinkedList
+from Utils.LinkedList import LinkedList
 
 def getreversedLinkedList(linkedList):
     reversedLinkedList = LinkedList()

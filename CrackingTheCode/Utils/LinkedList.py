@@ -1,4 +1,4 @@
-from Chapter2.Node import Node
+from Utils.Node import Node
 
 class LinkedList:
     def __init__(self):

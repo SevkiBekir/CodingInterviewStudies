@@ -1,4 +1,4 @@
-from Chapter2.LinkedList import LinkedList
+from Utils.LinkedList import LinkedList
 
 if __name__ == '__main__':
     l1 = LinkedList()

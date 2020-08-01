@@ -1,5 +1,5 @@
-from Chapter2.Node import Node
-from Chapter2.LinkedList import LinkedList
+from Utils.Node import Node
+from Utils.LinkedList import LinkedList
 def getLastNode(linkedList):
 
     node = linkedList.head
