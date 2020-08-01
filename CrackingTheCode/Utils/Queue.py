@@ -39,6 +39,7 @@ class Queue:
 
         firstNode = self.first
         self.first = self.first.next
+        self.size -=1
 
         return firstNode
 
