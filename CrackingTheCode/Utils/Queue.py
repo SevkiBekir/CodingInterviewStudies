@@ -10,8 +10,8 @@ class Queue:
     def isEmpty(self):
         return self.size == 0
 
-    def printList(self):
-        print("Printing List")
+    def print(self):
+        print("Printing Queue")
         printingNode = self.first
 
         while printingNode is not None:

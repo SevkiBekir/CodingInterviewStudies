@@ -6,8 +6,8 @@ class Stack:
         self.top = None
         self.size = 0
 
-    def printList(self):
-        print("Printing List")
+    def print(self):
+        print("Printing Stack")
         printingNode = self.top
 
         while printingNode is not None:
