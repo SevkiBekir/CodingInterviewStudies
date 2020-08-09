@@ -29,12 +29,15 @@ class Stack:
 
     def push(self, newData):
         newNode = Node(newData)
+        self.pushNode(newNode)
 
+
+    def pushNode(self, newNode):
         newNode.next = self.top
         self.top = newNode
-        self.size +=1
+        self.size += 1
 
-        print("New data {"+str(newData)+"} was pushed into stack")
+        print("New data {" + str(newNode.data) + "} was pushed into stack")
 
     def peek(self):
         if self.top is not None:
