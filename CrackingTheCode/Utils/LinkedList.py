@@ -5,6 +5,9 @@ class LinkedList:
         self.head = None
         self.size = 0
 
+    def isEmpty(self):
+        return self.size == 0
+
     def printList(self):
         print("Printing List")
         printingNode = self.head
