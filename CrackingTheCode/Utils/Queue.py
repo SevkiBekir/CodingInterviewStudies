@@ -30,16 +30,20 @@ class Queue:
             self.last = newNode
 
         self.size +=1
-        print("New data {"+str(newData)+"} was pushed into stack")
+        print("New data {"+str(newData)+"} was pushed into queue")
 
     def dequeue(self):
         if self.first is None and self.last is None:
-            print("Error! Stack is not popped! Since it is empty")
+            print("Error! Queue is not popped! Since it is empty")
             return
 
         firstNode = self.first
         self.first = self.first.next
-        self.size -=1
+
+        if self.size == 1:
+            self.last = self.first
+
+        self.size -= 1
 
         return firstNode
 
