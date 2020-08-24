@@ -23,7 +23,12 @@ class Graph:
             self.adjacencyMatrix.append(row)
 
     def print(self):
-        print("Printing Graph")
+        print("##################")
+        print("# Printing Graph #")
+        print("##################")
+        print("From / To - >")
+        print("|")
+        print("v")
         rowHeader = "\t"
         splitter = ""
         for i in range(self.size):
@@ -96,3 +101,58 @@ class Graph:
 
         convertedVisitedData = self.convertVisitedVertexToData(visited)
         return convertedVisitedData
+
+
+    def getFirstPathWrtDfs(self, startingVertex):
+        visited = [False] * self.size
+        return self.dfsHelperForFirstPath(startingVertex,visited,[])
+
+
+    def dfsHelperForFirstPath(self, vertex, visitedInfo,visitedVertices):
+
+        vertexIndex = self.findIndex(vertex.data)
+
+        visitedInfo[vertexIndex] = True
+        visitedVertices.append(vertex.data)
+        #print(vertex.data, end=' ')
+
+
+        vertexAdjcencies = self.getAdjcancies(vertex.data)
+        for adjVertex in vertexAdjcencies:
+            adjVertexIndex = self.findIndex(adjVertex)
+            if not visitedInfo[adjVertexIndex]:
+                return self.dfsHelperForFirstPath(self.vertices[adjVertexIndex],visitedInfo,visitedVertices)
+
+        print("first path:")
+        print(visitedVertices)
+        return visitedVertices
+
+    def getVertexForIncomingEdges(self, vertex):
+        vertexIndex = self.findIndex(vertex.data)
+        adjcancies = []
+        for i in range(self.size):
+            if self.adjacencyMatrix[i][vertexIndex] == 1:
+                adjcancies.append(self.vertices[i].data)
+
+        return adjcancies
+
+    def getAllVerticesForNoIncomingEdges(self):
+        vertices = []
+        for vertex in self.vertices:
+            vertexAdjcencies = self.getVertexForIncomingEdges(vertex)
+            if not vertexAdjcencies:
+                vertices.append(vertex)
+
+
+        return vertices
+
+
+    def removeIncomingEdgesFor(self, vertex):
+        vertexIndex = self.findIndex(vertex.data)
+        for i in range(self.size):
+            if self.adjacencyMatrix[vertexIndex][i] == 1:
+                self.adjacencyMatrix[vertexIndex][i] = 0
+
+    def removeAllVerticesForIncomingEdges(self,vertexList):
+        for vertex in vertexList:
+            self.removeIncomingEdgesFor(vertex)
