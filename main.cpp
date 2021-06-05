@@ -6,6 +6,8 @@
 #include <HackerRank/Practices/Cpp/StructPractices.h>
 #include <HackerRank/Practices/Cpp/ClassPractices.h>
 #include <HackerRank/Practices/Cpp/ClassesObjectsPractices.h>
+#include <Others/FindingEfficientBuildingProblem.h>
+
 void printSectionSeperator(){
     std::cout << "##############################################3" << std::endl;
 
@@ -39,12 +41,21 @@ void runCrackingTheCodeSection(){
 
     //TODO: add cpp solution for the problems.
 }
+
+void runOthersSection(){
+    printSectionSeperator();
+    std::cout << "Others Section Running!" << std::endl;
+
+    FindingEfficientBuildingProblem findingEfficientBuildingProblem;
+    findingEfficientBuildingProblem.run();
+
+}
 int main(int argc, char* argv[]) {
     std::cout << "Hello Cpp Practices Main!" << std::endl;
 
     runLeetCodeSection();
     runHackerRankSection();
     runCrackingTheCodeSection();
-
+    runOthersSection();
 
 }

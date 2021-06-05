@@ -30,6 +30,8 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -O0  -D_GNU_SOURCE")
 # Get header files
 file(GLOB_RECURSE HEADERS
         "${PROJECT_DIR}/LeetCode/*.h"
+        "${PROJECT_DIR}/HackerRank/*.h"
+        "${PROJECT_DIR}/Others/*.h"
         "${PROJECT_DIR}/Utils/*.h"
         )
 
@@ -37,6 +39,7 @@ file(GLOB_RECURSE HEADERS
 file(GLOB_RECURSE SOURCES
         "${PROJECT_DIR}/HackerRank/*.cpp"
         "${PROJECT_DIR}/LeetCode/*.cpp"
+        "${PROJECT_DIR}/Others/*.cpp"
         "${PROJECT_DIR}/Utils/*.cpp"
         )
 
