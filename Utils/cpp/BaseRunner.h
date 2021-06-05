@@ -11,7 +11,6 @@
 
 class BaseRunner {
 public:
-    void init();
     void run();
 
     const std::string &getProblemName() const;
@@ -24,6 +23,7 @@ protected:
 
 
 private:
+    void init();
     void printTitle();
     void printSeperator();
 
