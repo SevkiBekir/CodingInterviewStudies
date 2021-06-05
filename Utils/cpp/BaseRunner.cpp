@@ -13,6 +13,8 @@ void BaseRunner::init() {
 }
 
 void BaseRunner::run() {
+    init();
+
     std::cout << "Running..." << std::endl;
     problemRun();
 }
