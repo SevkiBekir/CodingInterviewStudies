@@ -35,6 +35,7 @@ file(GLOB_RECURSE HEADERS
 
 # Get source files
 file(GLOB_RECURSE SOURCES
+        "${PROJECT_DIR}/HackerRank/*.cpp"
         "${PROJECT_DIR}/LeetCode/*.cpp"
         "${PROJECT_DIR}/Utils/*.cpp"
         )
