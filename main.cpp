@@ -27,6 +27,9 @@ void runHackerRankSection(){
 
 //    ClassesObjectsPractices classesObjectsPractices;
 //    classesObjectsPractices.run();
+
+    Bit_Manipulation_Lonely_Integer bitManipulationLonelyInteger;
+    bitManipulationLonelyInteger.run();
 }
 
 void runLeetCodeSection(){
