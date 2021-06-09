@@ -7,9 +7,11 @@
 #include <HackerRank/Practices/Cpp/ClassPractices.h>
 #include <HackerRank/Practices/Cpp/ClassesObjectsPractices.h>
 #include <Others/FindingEfficientBuildingProblem.h>
+#include <CrackingTheCode/Chapter5_BitManipulation/Insertion_5_1.h>
+#include <HackerRank/Bit_Manipulation_Lonely_Integer.h>
 
 void printSectionSeperator(){
-    std::cout << "##############################################3" << std::endl;
+    std::cout << "##############################################" << std::endl;
 
 }
 void runHackerRankSection(){
@@ -39,7 +41,8 @@ void runCrackingTheCodeSection(){
     printSectionSeperator();
     std::cout << "Cracking the Code Section Running!" << std::endl;
 
-    //TODO: add cpp solution for the problems.
+    Insertion_5_1 insertion51;
+    insertion51.run();
 }
 
 void runOthersSection(){
