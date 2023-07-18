@@ -1,5 +1,9 @@
 .idea/*
+**/.idea/*
 .DS_Store
 CrackingTheCode/.idea/*
 cmake-build-debug/*
+**/cmake-build-debug/*
 *.pdf
+**/build/*
+.vscode/*
